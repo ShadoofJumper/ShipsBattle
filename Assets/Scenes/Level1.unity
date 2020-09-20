@@ -216,6 +216,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &876032133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 876032134}
+  m_Layer: 0
+  m_Name: FolderForBullets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &876032134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876032133}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.117007, y: 1.8290893, z: 17.73754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &927305711
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +256,8 @@ GameObject:
   m_Component:
   - component: {fileID: 927305713}
   - component: {fileID: 927305712}
+  - component: {fileID: 927305714}
+  - component: {fileID: 927305715}
   m_Layer: 0
   m_Name: MainManager
   m_TagString: Untagged
@@ -245,9 +277,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cffe0c46fd784a3448633703dc0bad5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneController: {fileID: 0}
-  uiController: {fileID: 0}
   player: {fileID: 1488912571}
+  sceneController: {fileID: 927305714}
+  uiController: {fileID: 927305715}
 --- !u!4 &927305713
 Transform:
   m_ObjectHideFlags: 0
@@ -262,6 +294,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &927305714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927305711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876cbb76bcdd5e24ead87ffa85ed9248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  folderForBullets: {fileID: 876032134}
+--- !u!114 &927305715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927305711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161eb599ea8b069488fedb188afb933c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1161056872
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +834,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1488912572, guid: ca1d0401037f53e4980f37f7770f0380, type: 3}
       propertyPath: bulletSpeed
-      value: 6
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488912572, guid: ca1d0401037f53e4980f37f7770f0380, type: 3}
+      propertyPath: fireRate
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca1d0401037f53e4980f37f7770f0380, type: 3}

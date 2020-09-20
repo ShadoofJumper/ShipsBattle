@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class MainManager : MonoBehaviour
 {
-    [SerializeField] private SceneController sceneController;
-    [SerializeField] private UIController uiController;
-    [SerializeField] private GameObject player;
-    
     #region Singlton
 
     public static MainManager instance;
@@ -25,6 +21,11 @@ public class MainManager : MonoBehaviour
 
     }
     #endregion
+    
+    [SerializeField] private GameObject player;
+    public SceneController sceneController;
+    public UIController uiController;
+
 
     public GameObject Player => player;
     

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Combat : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletOriginal;
-    [SerializeField] private float fireRate;
+    [SerializeField] protected GameObject bulletOriginal;
     
     private int health;
     private int damage;
@@ -22,9 +21,6 @@ public class Combat : MonoBehaviour
         Destroy(gameObject);
     }
 
-    protected GameObject CreateBullet(Vector3 direction, Vector3 position)
-    {
-        return Instantiate(bulletOriginal, position, Quaternion.identity);
-    }
+
 
 }
