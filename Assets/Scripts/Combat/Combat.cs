@@ -2,25 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Combat : MonoBehaviour
+public class Combat : Destroyable
 {
     [SerializeField] protected GameObject bulletOriginal;
-    
-    private int health;
-    private int damage;
-    
-    public void TakeDamage(int value)
+    [SerializeField] protected float bulletSpeed;
+    [SerializeField] protected float fireRate = 1.0f;
+
+    private Queue<GameObject> bulletPool = new Queue<GameObject>();
+
+    public float BulletSpeed => bulletSpeed;
+    public float FireRate => fireRate;
+    public GameObject BulletOriginal => bulletOriginal;
+
+    public Queue<GameObject> BulletPool
     {
-        health -= value;
-        if (health <= 0)
-            Die();
+        get
+        {
+            return bulletPool;
+        }
+        set
+        {
+            bulletPool = value;
+        }
     }
     
-    private void Die()
-    {
-        Destroy(gameObject);
-    }
-
-
 
 }

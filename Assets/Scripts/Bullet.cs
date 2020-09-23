@@ -8,16 +8,17 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float speed = 1.0f;
     [SerializeField] private float delayDestroy = 7.0f;
-
+    [SerializeField] private int damage = 1;
+    
     private Rigidbody2D bulletRig;
-    private ShipSide bulletShipSide;
+    private ColorSide bulletColorSide;
     
     public Action<GameObject> OnBulletDestroy;
     
-    public void Init(float speed, ShipSide bulletShipSide)
+    public void Init(float speed, ColorSide bulletColorSide)
     {
         this.speed = speed;
-        this.bulletShipSide = bulletShipSide;
+        this.bulletColorSide = bulletColorSide;
     }
     
     private void Start()
@@ -47,4 +48,23 @@ public class Bullet : MonoBehaviour
         Vector3 newPos = transform.position + transform.right * speed * Time.deltaTime;
         bulletRig.MovePosition(newPos);
     }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroyable destroyableObject = other.GetComponent<Destroyable>();
+        Debug.Log(destroyableObject);
+        if ( destroyableObject != null )
+        {
+            //get damage object can do
+            if (destroyableObject.ColorSide != bulletColorSide)
+                destroyableObject.TakeDamage(damage);
+            else
+                return;
+        }
+        OnBulletDestroy(gameObject);
+    }
+    
+ 
+
 }

@@ -20,7 +20,7 @@ public class SceneController : MonoBehaviour
     }
 }
 
-public enum ShipSide
+public enum ColorSide
 {
     red,
     green,
