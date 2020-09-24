@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &303509013
 Transform:
   m_ObjectHideFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1279162347
 Transform:
   m_ObjectHideFlags: 0
@@ -237,10 +237,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorSide: 1
-  health: 1
+  health: 100
   bulletOriginal: {fileID: 7506440616142394996, guid: 95e1abb71e5107f4599541a67359a3ef,
     type: 3}
-  bulletSpeed: 30
+  bulletSpeed: 100
   fireRate: 3
   backTurret: {fileID: 1279162348}
   frontTurrent: {fileID: 1359910172}
@@ -256,8 +256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a830dcd7589b049bbeadc0389efbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  angularSpeed: 180
+  moveSpeed: 30
+  angularSpeed: 140
 --- !u!61 &7190010220056818552
 BoxCollider2D:
   m_ObjectHideFlags: 0

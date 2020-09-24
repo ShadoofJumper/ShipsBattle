@@ -192,8 +192,8 @@ MonoBehaviour:
   health: 3
   bulletOriginal: {fileID: 7506440616142394996, guid: 95e1abb71e5107f4599541a67359a3ef,
     type: 3}
-  bulletSpeed: 10
-  fireRate: 0
+  bulletSpeed: 70
+  fireRate: 3
   turrets:
   - {fileID: 5370916902666669317}
 --- !u!114 &8336965492026659230
@@ -208,6 +208,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be040fb01e720a4dad51d1f3cf86694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 15
+  angularSpeed: 90
+  searchRange: 125.5
+  searchAngle: 45
 --- !u!61 &1860366014
 BoxCollider2D:
   m_ObjectHideFlags: 0

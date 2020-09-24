@@ -53,7 +53,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Destroyable destroyableObject = other.GetComponent<Destroyable>();
-        Debug.Log(destroyableObject);
+
         if ( destroyableObject != null )
         {
             //get damage object can do
