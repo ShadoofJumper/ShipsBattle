@@ -23,7 +23,17 @@ public class PlayerCombat : Combat
             backTurret.ShootPlayerTurret();
     }
 
-    
+    public override void TakeDamage(int value)
+    {
+        health -= value;
+        if (health <= 0)
+        {
+            health = 0;
+            Die();
+        }
+        MainManager.instance.uiController.UpdatePlayerHealth(health);
+    }
+
 
 
 }

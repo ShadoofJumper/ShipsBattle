@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283036023962856601}
   - component: {fileID: 488977917}
-  - component: {fileID: 8407068947337024103}
+  - component: {fileID: 8135822799624184173}
   m_Layer: 0
   m_Name: DestroyBlock
   m_TagString: Untagged
@@ -59,7 +59,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.19, y: 1.27}
   m_EdgeRadius: 0
---- !u!114 &8407068947337024103
+--- !u!114 &8135822799624184173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,12 +68,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1283036023962856600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b9f8d415d5ff034ab57bf0f91bc5f6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 18cd6e56e54e6fd4c826e8793c04cc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorSide: 0
+  colorSide: 2
   health: 10
-  bulletOriginal: {fileID: 0}
 --- !u!1 &1283036024413225800
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class SmallShip : Ship
 {
-    [SerializeField] private bool isPlayer;
     
 }

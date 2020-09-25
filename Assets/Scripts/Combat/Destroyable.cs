@@ -9,7 +9,7 @@ public class Destroyable : MonoBehaviour
 
     public ColorSide ColorSide => colorSide;
     
-    public void TakeDamage(int value)
+    public virtual void TakeDamage(int value)
     {
         health -= value;
         if (health <= 0)
@@ -18,6 +18,8 @@ public class Destroyable : MonoBehaviour
     
     public void Die()
     {
+        if(colorSide != ColorSide.neutral)
+            MainManager.instance.scoreManager.IncreaseKills(colorSide);
         Destroy(gameObject);
     }
 }

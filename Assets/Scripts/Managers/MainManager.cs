@@ -25,7 +25,7 @@ public class MainManager : MonoBehaviour
     [SerializeField] private GameObject player;
     public SceneController sceneController;
     public UIController uiController;
-
+    public ScoreManager scoreManager;
 
     public GameObject Player => player;
     

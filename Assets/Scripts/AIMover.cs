@@ -88,7 +88,7 @@ public class AIMover : MonoBehaviour
 
     private bool IsTargetIsEnemy(GameObject shipObject)
     {
-        return shipObject.GetComponent<Combat>().ColorSide != parentShipColorSide;
+        return shipObject.GetComponent<Destroyable>().ColorSide != parentShipColorSide;
     }
     
     
@@ -109,9 +109,9 @@ public class AIMover : MonoBehaviour
         transform.position += transform.right * moveSpeed * Time.deltaTime;
     }
 
-   //private void OnDrawGizmos()
-   //{
-   //    Gizmos.color = Color.yellow;
-   //    Gizmos.DrawWireSphere(transform.position, searchRange);
-   //}
+   private void OnDrawGizmos()
+   {
+       Gizmos.color = Color.yellow;
+       Gizmos.DrawWireSphere(transform.position, searchRange);
+   }
 }
